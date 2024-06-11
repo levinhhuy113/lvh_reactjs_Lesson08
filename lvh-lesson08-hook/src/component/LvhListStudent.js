@@ -11,7 +11,14 @@ export default function LvhListStudent({ renderLvhListStudents, onEditTask, onRe
                 <td>{task.lvhId}</td>
                 <td>{task.lvhName}</td>
                 <td>{task.lvhAge}</td>
-                <td>{task.lvhIsActive ? "True" : "False"}</td>
+                
+                <td>
+                        <input
+                            type="checkbox"
+                            checked={task.lvhIsActive}
+                            readOnly
+                        />
+                    </td>
                 <td>
                     <button className='btn btn-success' onClick={() => onEditTask(index)}>Sửa</button>
                     <button className='btn btn-danger' onClick={() => onRemoveTask(index)}>Xóa</button>
